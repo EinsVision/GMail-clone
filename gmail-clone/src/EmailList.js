@@ -12,6 +12,7 @@ import InboxIcon from '@material-ui/icons/Inbox';
 import PeopleIcon from '@material-ui/icons/People';
 import LocalOfferIcon from '@material-ui/icons/LocalOffer';
 import Section from './Section';
+import EmailRow from './EmailRow';
 
 function EmailList() {
   return (
@@ -58,7 +59,12 @@ function EmailList() {
       </div>
 
       <div className='emailList__list'>
-        
+        <EmailRow 
+          title='Google'
+          subject='Happy new year and welcome back!'  
+          description='This is a test'
+          time='10pm'
+        />
       </div>
     </div>
   )
