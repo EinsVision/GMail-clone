@@ -11,6 +11,7 @@ import {
 
 import Mail from './Mail';
 import EmailList from './EmailList';
+import SendMail from './SendMail';
 
 
 function App() {
@@ -32,6 +33,8 @@ function App() {
 
           </Switch>
         </div>
+
+        <SendMail />
       </div>
     </Router>
   );
