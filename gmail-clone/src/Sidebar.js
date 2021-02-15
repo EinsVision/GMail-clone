@@ -17,7 +17,7 @@ import PhoneIcon from '@material-ui/icons/Phone';
 function Sidebar() {
   return (
     <div className='sidebar'>
-      <Button startIcon={ <AddIcon font-size='large' /> } className='sidebar__compose' >Compose</Button>
+      <Button startIcon={ <AddIcon fontSize='large' /> } className='sidebar__compose' >Compose</Button>
       <SidebarOption Icon={InboxIcon} title='Inbox' number={54} selected={true}/>
       <SidebarOption Icon={StarIcon} title='Starred' number={54} />
       <SidebarOption Icon={AccessTimeIcon} title='Snoozed' number={54} />
