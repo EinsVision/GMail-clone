@@ -79,19 +79,6 @@ function EmailList() {
             time={new Date(timestamp?.seconds * 1000).toUTCString()}
           />
         ))}
-        <EmailRow 
-          title='Google'
-          subject='Happy new year and welcome back!'  
-          description='This is a test'
-          time='10pm'
-        />
-
-        <EmailRow 
-          title='Google'
-          subject='Happy new year and welcome back!'  
-          description='This is a test.This is a test.This is a test.This is a test.This is a test'
-          time='10pm'
-        />
       </div>
     </div>
   )
