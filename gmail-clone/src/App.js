@@ -14,31 +14,35 @@ import EmailList from './EmailList';
 import SendMail from './SendMail';
 import {useSelector} from 'react-redux';
 import { selectSendMessageIsOpen } from './features/mailSlice';
+import { selectUser } from './features/userSlice';
+import Login from './Login';
 
 function App() {
   const sendMessageIsOpen = useSelector(selectSendMessageIsOpen);
+  const user = useSelector(selectUser);
 
   return (
     <Router>
-      <div className="app">
-        <Header />
-        <div className='app__body'>
-          <Sidebar />
+      {!user ? (
+        <Login />
+      ): <div className="app">
+          <Header />
+          <div className='app__body'>
+            <Sidebar />
 
-          <Switch>
-            <Route path='/mail'>
-              <Mail />
-            </Route>
+            <Switch>
+              <Route path='/mail'>
+                <Mail />
+              </Route>
 
-            <Route path='/'>
-              <EmailList />
-            </Route>
+              <Route path='/'>
+                <EmailList />
+              </Route>
 
-          </Switch>
-        </div>
-
+            </Switch>
+          </div>
         { sendMessageIsOpen && <SendMail /> }
-      </div>
+      </div>}
     </Router>
   );
 }
